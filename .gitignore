@@ -1,5 +1,4 @@
-/.idea/
-/pom.xml.versionsBackup
-/NexEngine.jar
-/NexEngine/target/
-/NexEngine/pom.xml.versionsBackup
+.gradle/
+.idea/
+build/
+target/

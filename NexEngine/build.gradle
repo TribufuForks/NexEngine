@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.0'
+}
+
+archivesBaseName = "Tribufu-NexEngine"
+version "1.0.0"
+
+repositories {
+    mavenCentral()
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots' }
+    maven { url 'https://repo.papermc.io/repository/maven-public' }
+    maven { url 'https://repo.extendedclip.com/content/repositories/placeholderapi' }
+    maven { url 'https://repo.opencollab.dev/maven-snapshots'}
+    maven { url 'https://libraries.minecraft.net' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    // implementation 'io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
+    compileOnly 'me.clip:placeholderapi:2.10.10'
+    compileOnly 'org.geysermc.floodgate:api:2.2.0-SNAPSHOT'
+    implementation 'com.mojang:authlib:5.0.47'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
+    implementation 'it.unimi.dsi:fastutil:8.5.11'
+    implementation 'org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT'
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+processResources {
+    doFirst {
+        file("$buildDir/resources/main").listFiles().each {
+            it.delete()
+        }
+    }
+}
