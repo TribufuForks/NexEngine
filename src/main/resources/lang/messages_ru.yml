@@ -1,0 +1,80 @@
+# Здесь вы можете создать свои собственные заполнители, чтобы использовать их в конфигурации языка.
+# Key = Placeholder, Value = Replacer.
+Placeholders:
+    "%gray%": "#d4d9d8"
+    "%red%": "#fd5e5e"
+    "%green%": "#aefd5e"
+Command:
+    Usage:
+        - '<! prefix:"false" !>'
+        - "#d4d9d8"
+        - "#fd5e5eError: #d4d9d8Неверные аргументы!"
+        - "#fd5e5eUsage: #fdf35e/%command_label% #ffeea2%command_usage%"
+        - "#d4d9d8"
+    Help:
+        List:
+            - '<! prefix:"false" !>'
+            - "#d4d9d8"
+            - "#fdf35e&l%plugin_name_localized%#d4d9d8 - #fdf35e&lКоманды:"
+            - "#d4d9d8"
+            - "#fd5e5e&l<> #d4d9d8- Обязательно, #aefd5e&l[] #d4d9d8- Опционально."
+            - "#d4d9d8"
+            - "#ffeea2 #fdf35e/%command_label% #ffeea2%command_usage% #d4d9d8- %command_description%"
+            - "#d4d9d8"
+        Desc: "Отобразить страницу помощи."
+    About:
+        Desc: "О плагине."
+    Reload:
+        Desc: "Перезагрузка плагина."
+        Done: "Все данные и настройки перезагружены!"
+Time:
+    Day: "%s%д."
+    Hour: "%s%ч."
+    Min: "%s%мин."
+    Sec: "%s%сек."
+Other:
+    "Yes": "#aefd5eДа"
+    "No": "#fd5e5eНет"
+    Any: Любой
+    None: "Ничего"
+    Never: Никогда
+    OneTimed: Одноразовый
+    Unlimited: Бесконечный
+    Infinity: ∞
+Error:
+    Player:
+        Invalid: "#fd5e5eИгрок не найден."
+    World:
+        Invalid: "#fd5e5eМир не найден."
+    Number:
+        Invalid: "#fd5e5e%num% недействительное число."
+    Permission:
+        Deny: "#fd5e5eУ вас нет прав на это действие!"
+    Command:
+        Self: "#fd5e5eНельзя использовать на себе."
+        Sender: "#fd5e5eЭта комманда только для игроков."
+Editor:
+    Tip:
+        Exit: '<! prefix:"false" !><? show_text:"#d4d9d8Click me or type #fd5e5e#exit" run_command:"/#exit" ?>#d4d9d8Click here to #fd5e5e[Exit Edit Mode]</>'
+    Title:
+        Done: "&a&lГотово!"
+        Edit: "&a&l< Режим редактора >"
+        Error: "&c&lОшибка!"
+    Error:
+        Number:
+            Generic: "&7Некорректное число!"
+            NotInt: "&7Число должно быть &cцелым&7!"
+        Enum: "&7Некорректное значение. Проверьте подсказки в чате."
+    Generic:
+        Close:
+            Name: "#FF5733(?) &lВыход"
+            Lore: []
+        Return:
+            Name: "#ffee9a(v) &fНазад"
+            Lore: []
+        NextPage:
+            Name: "#e3fbf9(>) &lСледующая страница"
+            Lore: []
+        PreviousPage:
+            Name: "#e3fbf9(<) &lПредыдущая страница"
+            Lore: []
