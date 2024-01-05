@@ -4,7 +4,7 @@ plugins {
 }
 
 archivesBaseName = "Tribufu-NexEngine"
-version "2.2.12"
+version "2.3.0"
 
 repositories {
     mavenCentral()
